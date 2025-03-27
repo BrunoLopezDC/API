@@ -12,6 +12,7 @@ export class ReportsService {
     return this.reportModel.find().exec();
   }
   async create(createReportDto: CreateReportDto): Promise<Report> {
+    console.log(createReportDto);
     const createdReport = new this.reportModel(createReportDto);
     return createdReport.save();
   }
